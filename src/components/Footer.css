@@ -1,0 +1,28 @@
+footer {
+  background: var(--off-white);
+  padding: 48px 0;
+  border-top: 1px solid rgba(18, 18, 18, 0.08);
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-inner .social-row a {
+  width: 36px;
+  height: 36px;
+  color: var(--black);
+}
+
+@media (max-width: 820px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
