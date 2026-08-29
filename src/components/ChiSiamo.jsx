@@ -1,4 +1,5 @@
 import { useLanguage } from '../LanguageContext.jsx'
+import { asset } from '../publicAsset.js'
 import './ChiSiamo.css'
 
 export default function ChiSiamo() {
@@ -8,7 +9,7 @@ export default function ChiSiamo() {
     <section className="dark-section" id="chi-siamo">
       <div className="wrap grid">
         <div className="img-block reveal">
-          <img src="/gallery/6.webp" alt={t.chiSiamo.imgAlt} />
+          <img src={asset('/gallery/6.webp')} alt={t.chiSiamo.imgAlt} />
         </div>
         <div className="reveal" style={{ '--reveal-delay': '0.15s' }}>
           <div className="eyebrow">{t.chiSiamo.eyebrow}</div>

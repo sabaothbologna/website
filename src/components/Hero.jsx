@@ -1,6 +1,7 @@
 import { Instagram, MessageCircle, Facebook } from 'lucide-react'
 import { CONTACT } from '../constants.js'
 import { useLanguage } from '../LanguageContext.jsx'
+import { asset } from '../publicAsset.js'
 import './Hero.css'
 
 export default function Hero() {
@@ -9,7 +10,7 @@ export default function Hero() {
   return (
     <section className="hero" id="top">
       <div className="hero-bg" aria-hidden="true">
-        <img src="/photos/hero2.png" alt="" />
+        <img src={asset('/photos/hero2.png')} alt="" />
       </div>
       <div className="wrap">
         <div className="eyebrow hero-in" style={{ '--in-delay': '0.05s' }}>

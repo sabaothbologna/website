@@ -1,10 +1,11 @@
 import { useLanguage } from '../LanguageContext.jsx'
+import { asset } from '../publicAsset.js'
 import './Eventi.css'
 
 const EVENT_IMAGES = [
   'https://images.unsplash.com/photo-1600288480699-0b0d8a456dd8?auto=format&fit=crop&w=700&q=80',
   'https://images.unsplash.com/photo-1663162550932-f67b561e656f?auto=format&fit=crop&w=700&q=80',
-  '/photos/yous-night.jpg',
+  asset('/photos/yous-night.jpg'),
 ]
 
 export default function Eventi() {

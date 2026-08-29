@@ -1,16 +1,17 @@
 import { useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLanguage } from '../LanguageContext.jsx'
+import { asset } from '../publicAsset.js'
 import './Gallery.css'
 
 const PHOTOS = [
-  '/gallery/1.webp',
-  '/gallery/2.webp',
-  '/gallery/3.webp',
-  '/gallery/4.webp',
-  '/gallery/5.webp',
-  '/gallery/6.webp',
-  '/gallery/7.webp',
+  asset('/gallery/1.webp'),
+  asset('/gallery/2.webp'),
+  asset('/gallery/3.webp'),
+  asset('/gallery/4.webp'),
+  asset('/gallery/5.webp'),
+  asset('/gallery/6.webp'),
+  asset('/gallery/7.webp'),
 ]
 
 export default function Gallery() {
