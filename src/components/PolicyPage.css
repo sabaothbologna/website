@@ -1,0 +1,37 @@
+.policy-page {
+  padding: 140px 0 96px;
+  min-height: 100vh;
+}
+
+.policy-inner {
+  max-width: 760px;
+}
+
+.policy-back {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: var(--gray);
+  text-decoration: underline;
+}
+
+.policy-page h1 {
+  margin-bottom: 8px;
+}
+
+.policy-updated {
+  color: var(--gray);
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+
+.policy-page h2 {
+  margin: 32px 0 12px;
+  font-size: 20px;
+}
+
+.policy-page p {
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}

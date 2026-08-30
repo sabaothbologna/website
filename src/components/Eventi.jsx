@@ -23,7 +23,7 @@ export default function Eventi() {
           {t.eventi.items.map((event, index) => (
             <div
               className="event-card reveal"
-              key={event.title}
+              key={index}
               style={{ '--reveal-delay': `${index * 0.12}s` }}
             >
               <div

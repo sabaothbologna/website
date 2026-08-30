@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './LanguageContext.jsx'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
@@ -9,6 +10,22 @@ import Gallery from './components/Gallery.jsx'
 import VieniATrovarci from './components/VieniATrovarci.jsx'
 import Contattaci from './components/Contattaci.jsx'
 import Footer from './components/Footer.jsx'
+import PrivacyPolicy from './components/PrivacyPolicy.jsx'
+import CookiePolicy from './components/CookiePolicy.jsx'
+
+function HomePage() {
+  return (
+    <main>
+      <Hero />
+      <ChiSiamo />
+      <Gallery />
+      <Eventi />
+      <Bologna />
+      <VieniATrovarci />
+      <Contattaci />
+    </main>
+  )
+}
 
 export default function App() {
   useEffect(() => {
@@ -35,15 +52,11 @@ export default function App() {
   return (
     <LanguageProvider>
       <Header />
-      <main>
-        <Hero />
-        <ChiSiamo />
-        <Gallery />
-        <Eventi />
-        <Bologna />
-        <VieniATrovarci />
-        <Contattaci />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+      </Routes>
       <Footer />
     </LanguageProvider>
   )

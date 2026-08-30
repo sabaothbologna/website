@@ -19,10 +19,30 @@ footer {
   color: var(--black);
 }
 
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: var(--gray);
+  text-decoration: underline;
+}
+
 @media (max-width: 820px) {
   .footer-inner {
     flex-direction: column;
     gap: 16px;
     text-align: center;
+  }
+
+  .footer-legal {
+    align-items: center;
   }
 }

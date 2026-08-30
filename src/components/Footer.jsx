@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Instagram, MessageCircle, Facebook } from 'lucide-react'
 import { CONTACT } from '../constants.js'
 import { useLanguage } from '../LanguageContext.jsx'
@@ -9,7 +10,13 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap footer-inner">
-        <div>{t.footer.copyright}</div>
+        <div className="footer-legal">
+          <div>{t.footer.copyright}</div>
+          <div className="footer-links">
+            <Link to="/privacy-policy">{t.footer.privacyPolicy}</Link>
+            <Link to="/cookie-policy">{t.footer.cookiePolicy}</Link>
+          </div>
+        </div>
         <div className="social-row">
           <a href={CONTACT.instagramUrl} aria-label={t.social.instagram} target="_blank" rel="noreferrer">
             <Instagram size={16} />
