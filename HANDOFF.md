@@ -8,24 +8,19 @@ https://github.com/sabaothbologna/website
 
 ## Stack
 - React (via Vite)
-- Deploy: Vercel (live) + GitHub Pages (workflow ready, not yet activated)
+- Deploy: Vercel only (GitHub Pages was considered, then dropped)
 - No backend/Firebase needed for v1 — pure static content
 - Language: Italian + English, with browser auto-detect and manual switcher
 
-## Deploy status (2026-08-29)
+## Deploy status (2026-08-30)
 - **Vercel: live.** Root Directory is currently set to `sabaoth-website` in Vercel
-  project settings — a workaround because the GitHub repo has all files nested
-  one level deep under a `sabaoth-website/` folder (from a manual zip upload via
-  the GitHub web UI, instead of `git push`).
-- **GitHub repo structure fix: pending.** Local `main` branch already has the
-  correct flat structure (files at repo root) plus GitHub Pages support. To fix:
-  `git push origin main --force` (this will overwrite the nested-folder commits
-  currently on GitHub — safe, since local has all that content plus more).
-- **GitHub Pages: not active yet.** `.github/workflows/deploy-pages.yml` is
-  already committed and will auto-deploy to `https://sabaothbologna.github.io/website/`
-  once (1) the force-push above lands, and (2) repo Settings → Pages → Source is
-  set to "GitHub Actions" (one-time manual step).
-- After the force-push, reset Vercel's Root Directory back to blank/root.
+  project settings — a workaround because the GitHub repo had all files nested
+  one level deep under a `sabaoth-website/` folder (from an earlier manual zip
+  upload via the GitHub web UI, instead of `git push`).
+- **GitHub repo structure fix: done.** Local `main` (correct flat structure) was
+  force-pushed to origin, overwriting the old nested-folder commits.
+- **Next step:** reset Vercel's Root Directory back to blank/root now that the
+  repo root has the actual project files.
 
 ## Design tokens
 
@@ -86,9 +81,9 @@ Use uploaded SVG: `logo-_sabaoth_bologna.svg` — follow brand guidelines from t
 
 5. **Bologna** (off-white bg)
    - Eyebrow: "Bologna"
-   - H2: "La nostra casa"
+   - H2: "La nostra città"
    - Body: "Portici, torri, una città viva, piena di storia e di persone che cercano ancora un senso più grande. Vogliamo essere qui, portando qualcosa che rimane."
-   - Photo grid: 4 photos (large + 3 smaller) — Portici, Torri, Piazza Maggiore, community photo. Use real Unsplash photos for the city shots (search terms: "bologna portici", "bologna towers", "piazza maggiore bologna") and a real community photo if available.
+   - Photo grid: 5-photo bento mosaic using the church's own photos (San Luca, Due Torri, the canal, Piazza Santo Stefano, city skyline) — no captions.
 
 6. **Vieni a trovarci** (dark section, black bg)
    - Eyebrow: "Vieni a trovarci"
