@@ -8,9 +8,24 @@ https://github.com/sabaothbologna/website
 
 ## Stack
 - React (via Vite)
-- Deploy: Vercel
+- Deploy: Vercel (live) + GitHub Pages (workflow ready, not yet activated)
 - No backend/Firebase needed for v1 — pure static content
-- Language: Italian (all copy)
+- Language: Italian + English, with browser auto-detect and manual switcher
+
+## Deploy status (2026-08-29)
+- **Vercel: live.** Root Directory is currently set to `sabaoth-website` in Vercel
+  project settings — a workaround because the GitHub repo has all files nested
+  one level deep under a `sabaoth-website/` folder (from a manual zip upload via
+  the GitHub web UI, instead of `git push`).
+- **GitHub repo structure fix: pending.** Local `main` branch already has the
+  correct flat structure (files at repo root) plus GitHub Pages support. To fix:
+  `git push origin main --force` (this will overwrite the nested-folder commits
+  currently on GitHub — safe, since local has all that content plus more).
+- **GitHub Pages: not active yet.** `.github/workflows/deploy-pages.yml` is
+  already committed and will auto-deploy to `https://sabaothbologna.github.io/website/`
+  once (1) the force-push above lands, and (2) repo Settings → Pages → Source is
+  set to "GitHub Actions" (one-time manual step).
+- After the force-push, reset Vercel's Root Directory back to blank/root.
 
 ## Design tokens
 
