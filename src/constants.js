@@ -10,8 +10,6 @@ export const CONTACT = {
 
 export const NAV_LINKS = [
   { href: '#chi-siamo', key: 'chiSiamo' },
-  { href: '#galleria', key: 'galleria' },
-  { href: '#bologna', key: 'bologna' },
   { href: '#contatti', key: 'vieni' },
   { href: '#scrivici', key: 'contattaci' },
 ]

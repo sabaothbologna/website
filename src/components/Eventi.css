@@ -1,7 +1,13 @@
 .eventi {
-  padding: 120px 0;
+  padding: 100px 24px;
+}
+
+.eventi .wrap {
+  max-width: 1400px;
   background: var(--black);
   color: var(--off-white);
+  border-radius: 32px;
+  padding: 80px 40px;
 }
 
 .eventi .head {
@@ -56,11 +62,24 @@
   .event-grid {
     grid-template-columns: 1fr;
   }
+
+  .eventi {
+    padding: 72px 20px;
+  }
+
+  .eventi .wrap {
+    padding: 56px 28px;
+  }
 }
 
 @media (max-width: 520px) {
   .eventi {
-    padding: 72px 0;
+    padding: 56px 12px;
+  }
+
+  .eventi .wrap {
+    border-radius: 20px;
+    padding: 48px 20px;
   }
 
   .eventi h2 {
