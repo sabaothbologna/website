@@ -1,5 +1,6 @@
 import { CONTACT } from '../constants.js'
 import { useLanguage } from '../LanguageContext.jsx'
+import WhatsAppIcon from './icons/WhatsAppIcon.jsx'
 import './Contattaci.css'
 
 export default function Contattaci() {
@@ -13,6 +14,7 @@ export default function Contattaci() {
         <p>{t.contattaci.body}</p>
         <div className="cta-row">
           <a href={CONTACT.whatsappUrl} className="btn" target="_blank" rel="noreferrer">
+            <WhatsAppIcon size={18} />
             {t.contattaci.whatsappBtn}
           </a>
         </div>

@@ -25,13 +25,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
+  height: 88px;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
-  height: 72px;
+  height: 84px;
 }
 
 .logo-img {
@@ -130,10 +130,10 @@
   .nav-mobile {
     display: block;
     position: fixed;
-    top: 76px;
+    top: 88px;
     left: 0;
     right: 0;
-    height: calc(100vh - 76px);
+    height: calc(100vh - 88px);
     background: var(--off-white);
     transform: translateX(100%);
     transition: transform 0.25s ease;
@@ -167,7 +167,7 @@
   }
 
   .logo-link {
-    height: 60px;
+    height: 68px;
   }
 
   .logo-img {

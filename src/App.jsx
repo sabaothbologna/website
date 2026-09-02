@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { LanguageProvider } from './LanguageContext.jsx'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
@@ -28,6 +28,12 @@ function HomePage() {
 }
 
 export default function App() {
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
   useEffect(() => {
     const els = document.querySelectorAll('.reveal')
     if (!('IntersectionObserver' in window)) {
@@ -47,7 +53,7 @@ export default function App() {
     )
     els.forEach((el) => observer.observe(el))
     return () => observer.disconnect()
-  }, [])
+  }, [location.pathname])
 
   return (
     <LanguageProvider>

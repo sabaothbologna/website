@@ -3,7 +3,7 @@
   src: url('./assets/fonts/Gotham-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
-  font-display: optional;
+  font-display: swap;
 }
 
 :root {

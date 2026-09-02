@@ -1,7 +1,8 @@
-import { Instagram, MessageCircle, Facebook } from 'lucide-react'
+import { Instagram, Facebook } from 'lucide-react'
 import { CONTACT } from '../constants.js'
 import { useLanguage } from '../LanguageContext.jsx'
 import { asset } from '../publicAsset.js'
+import WhatsAppIcon from './icons/WhatsAppIcon.jsx'
 import './Hero.css'
 
 export default function Hero() {
@@ -37,7 +38,7 @@ export default function Hero() {
             <Facebook size={18} />
           </a>
           <a href={CONTACT.whatsappUrl} aria-label={t.social.whatsapp} target="_blank" rel="noreferrer">
-            <MessageCircle size={18} />
+            <WhatsAppIcon size={18} />
           </a>
         </div>
       </div>

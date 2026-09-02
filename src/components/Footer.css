@@ -21,16 +21,17 @@ footer {
 
 .footer-legal {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.footer-links {
-  display: flex;
-  gap: 16px;
+.footer-sep {
+  color: var(--gray);
+  opacity: 0.5;
 }
 
-.footer-links a {
+.footer-legal a {
   color: var(--gray);
   text-decoration: underline;
 }
@@ -43,6 +44,6 @@ footer {
   }
 
   .footer-legal {
-    align-items: center;
+    justify-content: center;
   }
 }

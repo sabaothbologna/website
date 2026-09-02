@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Menu, X, Globe } from 'lucide-react'
 import logo from '../logo.svg'
 import { NAV_LINKS } from '../constants.js'
@@ -35,9 +36,9 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="wrap header-inner">
-        <a href="#top" className="logo-link" onClick={() => setMenuOpen(false)}>
+        <Link to="/" className="logo-link" onClick={() => setMenuOpen(false)}>
           <img src={logo} alt="Sabaoth Church Bologna" className="logo-img" />
-        </a>
+        </Link>
 
         <div className="header-right">
           <nav className="nav-desktop">

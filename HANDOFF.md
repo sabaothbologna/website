@@ -13,14 +13,22 @@ https://github.com/sabaothbologna/website
 - Language: Italian + English, with browser auto-detect and manual switcher
 
 ## Deploy status (2026-08-30)
-- **Vercel: live.** Root Directory is currently set to `sabaoth-website` in Vercel
-  project settings — a workaround because the GitHub repo had all files nested
-  one level deep under a `sabaoth-website/` folder (from an earlier manual zip
-  upload via the GitHub web UI, instead of `git push`).
-- **GitHub repo structure fix: done.** Local `main` (correct flat structure) was
-  force-pushed to origin, overwriting the old nested-folder commits.
-- **Next step:** reset Vercel's Root Directory back to blank/root now that the
-  repo root has the actual project files.
+- **Vercel: live and working.** GitHub repo structure was fixed (force-pushed
+  the correct flat structure, overwriting old nested-folder commits from a
+  manual zip upload) and Vercel's Root Directory was reset to blank/root to
+  match. Build succeeds.
+- **GitHub Pages: dropped.** Only Vercel is used for deploys now.
+
+## Known bug — queued for next update
+- **Gotham Bold font doesn't appear on first page load**, only after a
+  refresh. Root cause: the `@font-face` in `src/index.css` (around line 6)
+  uses `font-display: optional`, which tells the browser to abandon the
+  custom font entirely if it isn't already cached within ~100ms — so on a
+  first visit it silently keeps the fallback font instead of swapping in
+  Gotham once it finishes downloading. Fix: change to `font-display: swap`
+  (and consider a `<link rel="preload" as="font">` for the Gotham file in
+  `index.html` to start the download earlier). Not yet applied — queued for
+  next session.
 
 ## Design tokens
 
@@ -41,8 +49,8 @@ Usage guide:
 - Terracotta/sage/dark-green/nude = accent-only (photo treatments, event card imagery) — NOT full section backgrounds
 
 ### Typography
-- Display/headings: **Urbanist** (Google Fonts) — weight 800, uppercase, tight letter-spacing (-0.01em)
-- Body: **Montserrat** (Google Fonts) — free alternative to Gotham (do not use unlicensed Gotham files; license Gotham properly from Hoefler&Co if the church wants the original)
+- Display/headings: **Gotham Bold** (licensed .otf in `src/assets/fonts/`), falls back to Urbanist then sans-serif — uppercase, tight letter-spacing (-0.01em). See "Known bug" above re: first-load flash of the fallback font.
+- Body: **Montserrat** (Google Fonts)
 - Eyebrow labels: Montserrat, 600 weight, 13px, uppercase, letter-spacing 0.18em, color var(--gray)
 
 ### Icons
@@ -100,7 +108,15 @@ Use uploaded SVG: `logo-_sabaoth_bologna.svg` — follow brand guidelines from t
 
 8. **Footer**
    - "Sabaoth Church Bologna © 2026"
+   - Links to Privacy Policy and Cookie Policy (separate routed pages, see below)
    - Social icons: Instagram, WhatsApp
+
+## Additional pages
+- `/privacy-policy` and `/cookie-policy` — routed via `react-router-dom`
+  (see `src/components/PrivacyPolicy.jsx`, `CookiePolicy.jsx`, shared
+  `PolicyPage.jsx`). Content is original (not copied from Sabaoth Milano's
+  site), written to reflect what this site actually collects/uses. `vercel.json`
+  has a rewrite so direct links to these routes work on Vercel.
 
 ## Contact info
 - Instagram: @sabaothbologna
@@ -114,11 +130,11 @@ Use uploaded SVG: `logo-_sabaoth_bologna.svg` — follow brand guidelines from t
 - Real hamburger menu needed for mobile nav (wireframe currently just hides it — this needs proper implementation)
 - Test on actual devices/browser devtools, not just resizing
 
-## Assets needed before/during build
-- [ ] Real community photos (Chi siamo section)
-- [ ] Real Bologna city photos (from Unsplash or the church's own photos)
-- [ ] Google Maps embed code for the address
-- [ ] Confirm Montserrat as Gotham substitute, or provide licensed Gotham font files if purchasing
+## Assets status
+- [x] Real Bologna city photos — church's own photos now used in the Bologna section mosaic
+- [x] Google Maps embed — live, pinned to the address
+- [x] Gotham font files — licensed .otf in use
+- [ ] Real community photo for the Chi siamo section — still a stock/placeholder image
 
 ## Reference wireframe
 See attached `wireframe.html` — static HTML prototype showing full layout, copy, and visual direction already approved by the client. Use it as the structural and visual reference; rebuild in React following this same structure and design tokens.
