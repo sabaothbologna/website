@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sabaothchurchbologna.com/sitemap.xml
+Sitemap: https://www.sabaothchurchbologna.com/sitemap.xml
