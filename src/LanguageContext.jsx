@@ -5,17 +5,11 @@ const LanguageContext = createContext(null)
 
 const STORAGE_KEY = 'sabaoth-lang'
 
-function detectLanguage() {
-  if (typeof navigator === 'undefined') return 'it'
-  const browserLang = navigator.language || navigator.userLanguage || ''
-  return browserLang.toLowerCase().startsWith('it') ? 'it' : 'en'
-}
-
 function getInitialLanguage() {
   if (typeof window === 'undefined') return 'it'
   const saved = window.localStorage.getItem(STORAGE_KEY)
   if (saved === 'it' || saved === 'en') return saved
-  return detectLanguage()
+  return 'it'
 }
 
 export function LanguageProvider({ children }) {
