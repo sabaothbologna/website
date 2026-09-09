@@ -47,6 +47,13 @@ export const translations = {
         },
       ],
     },
+    pastori: {
+      eyebrow: 'I Nostri Pastori',
+      title: 'Past. Matteo e Irene',
+      p1: 'Chiamati fin da giovani a servire il Signore, i nostri pastori portano avanti da anni una vocazione nata presto e mai spenta. Lungo il cammino non si sono mai stancati di servire il Regno — con la stessa fede, la stessa dedizione, lo stesso amore per le persone che li ha mossi fin dall\'inizio.',
+      p2: 'La loro vocazione è prendersi cura dei cuori, nutrire la fede e aiutare ognuno a crescere in ciò che Dio lo ha chiamato ad essere.',
+      imgAlt: 'Past. Matteo e Irene, i pastori di Sabaoth Church Bologna',
+    },
     bologna: {
       eyebrow: 'Bologna',
       title: 'La nostra città',
@@ -251,6 +258,13 @@ export const translations = {
           text: "Join the Yous every Saturday if you're between 14 and 29! We love hanging out and having fun. Yous Night is the perfect place for us!",
         },
       ],
+    },
+    pastori: {
+      eyebrow: 'Our Pastors',
+      title: 'Past. Matteo and Irene',
+      p1: 'Called to serve the Lord since they were young, our pastors carry forward a vocation that began early and never faded. Along the way, they have never grown tired of serving the Kingdom — with the same faith, the same dedication, the same love for people that moved them from the start.',
+      p2: 'Their calling is to shepherd hearts, nurture faith, and help each person grow into who God made them to be.',
+      imgAlt: 'Past. Matteo and Irene, the pastors of Sabaoth Church Bologna',
     },
     bologna: {
       eyebrow: 'Bologna',

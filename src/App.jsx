@@ -5,6 +5,7 @@ import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import ChiSiamo from './components/ChiSiamo.jsx'
 import Eventi from './components/Eventi.jsx'
+import Pastori from './components/Pastori.jsx'
 import Bologna from './components/Bologna.jsx'
 import Gallery from './components/Gallery.jsx'
 import VieniATrovarci from './components/VieniATrovarci.jsx'
@@ -20,6 +21,7 @@ function HomePage() {
       <ChiSiamo />
       <Gallery />
       <Eventi />
+      <Pastori />
       <Bologna />
       <VieniATrovarci />
       <Contattaci />
