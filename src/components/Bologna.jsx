@@ -15,9 +15,6 @@ export default function Bologna() {
 
   return (
     <section className="bologna" id="bologna">
-      <div className="bologna-bg" aria-hidden="true">
-        <img src={asset('/photos/hero2.png')} alt="" />
-      </div>
       <div className="wrap">
         <div className="head reveal">
           <div className="eyebrow">{t.bologna.eyebrow}</div>
