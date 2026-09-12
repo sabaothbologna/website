@@ -72,6 +72,11 @@ export const translations = {
         'Il team di Sabaoth Church Bologna insieme',
         'Un messaggio durante il culto della domenica',
         'La community riunita in preghiera',
+        'Due amici che sorridono durante un evento della community',
+        "Bambini che disegnano insieme a un tavolo durante un'attività",
+        'Due amiche che ridono insieme per strada con un cartello "Gesù ti ama da morire"',
+        'Un gruppo di persone sedute insieme a tavola durante un momento di community',
+        'Una famiglia sorridente durante un evento della community',
       ],
     },
     vieni: {
@@ -284,6 +289,11 @@ export const translations = {
         'The Sabaoth Church Bologna team together',
         'A message during the Sunday service',
         'The community gathered in prayer',
+        'Two friends smiling together at a community event',
+        'Children drawing together at a table during an activity',
+        'Two friends laughing together on the street holding a "Jesus loves you to death" sign',
+        'A group of people sitting together at a table during a community moment',
+        'A smiling family at a community event',
       ],
     },
     vieni: {

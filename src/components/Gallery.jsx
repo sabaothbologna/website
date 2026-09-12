@@ -12,6 +12,11 @@ const PHOTOS = [
   asset('/gallery/5.webp'),
   asset('/gallery/6.webp'),
   asset('/gallery/7.webp'),
+  asset('/gallery/8.jpg'),
+  asset('/gallery/9.jpg'),
+  asset('/gallery/10.jpg'),
+  asset('/gallery/11.jpg'),
+  asset('/gallery/12.jpg'),
 ]
 
 export default function Gallery() {
