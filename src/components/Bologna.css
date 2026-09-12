@@ -1,6 +1,6 @@
 .bologna {
   padding: 120px 0;
-  background: #ffffff;
+  background: var(--off-white);
   color: var(--black);
   position: relative;
   overflow: hidden;
