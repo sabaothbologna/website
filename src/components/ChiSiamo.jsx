@@ -9,7 +9,7 @@ export default function ChiSiamo() {
     <section className="dark-section" id="chi-siamo">
       <div className="wrap grid">
         <div className="img-block reveal">
-          <img src={asset('/gallery/6.webp')} alt={t.chiSiamo.imgAlt} />
+          <img src={asset('/photos/pastmatteo.webp')} alt={t.chiSiamo.imgAlt} />
         </div>
         <div className="reveal" style={{ '--reveal-delay': '0.15s' }}>
           <div className="eyebrow">{t.chiSiamo.eyebrow}</div>
